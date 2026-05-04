@@ -1,0 +1,5 @@
+# Production Recommendation
+
+For a production deployment, the ingestion and retrieval pipeline should be made more durable and scalable. Wikipedia ingestion should include scheduled refreshes, better error handling, caching, and entity expansion beyond a fixed list. The vector store should support stronger metadata filtering, better ranking, and evaluation metrics for retrieval quality. A production system should also include logging, monitoring, latency tracking, and test sets for supported and unsupported questions.
+
+The current local design is intentionally simple and suitable for a laptop demo. In production, the system would benefit from stronger models, better chunking based on document structure, citation formatting, streaming responses, and clearer hallucination prevention. If multiple users were supported, the application would also need authentication, request limits, persistent chat history, and infrastructure for model serving.
