@@ -1,3 +1,11 @@
+pip install -r requirements.txt
+ollama pull llama3.2:1b
+ollama pull nomic-embed-text
+python app/wiki_ingest.py
+python -m app.main build-index
+python -m app.main chat --context
+
+
 # Local Wikipedia RAG Assistant
 
 This project is a local Retrieval Augmented Generation system that answers questions about famous people and famous places using Wikipedia data. The system runs on localhost and uses local resources for ingestion, retrieval, embeddings, vector storage, and answer generation.
